@@ -25,6 +25,9 @@ namespace Apice_ll_Trimestre.Models
 
         private int? _rachaActual;
 
+        [Display(Name = "Foto de perfil")]
+        public string FotoPerfil { get; set; } // ruta o URL de la imagen
+
         [Display(Name = "Racha actual")]
         public int? RachaActual
         {

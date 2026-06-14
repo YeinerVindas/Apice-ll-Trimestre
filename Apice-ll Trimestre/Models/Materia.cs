@@ -24,5 +24,9 @@ namespace Apice_ll_Trimestre.Models
         [Range(0, 100, ErrorMessage = "La nota mínima debe estar entre 0 y 100.")]
         [Display(Name = "Nota mínima")]
         public decimal? NotaMinima { get; set; }
+
+        [Required]
+        [Display(Name = "Color")]
+        public string Color { get; set; } // ej: "#FF5733"
     }
 }

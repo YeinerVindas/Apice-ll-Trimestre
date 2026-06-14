@@ -3,13 +3,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Apice_ll_Trimestre.Models
 {
-    public class Tareas
+    public class Tarea
     {
         public int ID { get; set; }
 
         [Required]
         [Display(Name = "Estudiante")]
         public int ID_Estudiante { get; set; }
+
+        [Required]
+        [Display(Name = "Materia")]
+        public int ID_Materia { get; set; }
 
         [Required]
         [Display(Name = "Título")]
@@ -20,7 +24,15 @@ namespace Apice_ll_Trimestre.Models
 
         [Required]
         [Display(Name = "Estado")]
-        public string Estado { get; set; }
+        public string Estado { get; set; } // "No hecho", "En proceso", "Hecho"
+
+        [Required]
+        [Display(Name = "Importancia")]
+        public string Importancia { get; set; } // "Alta", "Media", "Baja"
+
+        [Required]
+        [Display(Name = "Dificultad")]
+        public string Dificultad { get; set; } // "Alta", "Media", "Baja"
 
         [Required]
         [Display(Name = "Fecha de entrega")]
@@ -30,7 +42,6 @@ namespace Apice_ll_Trimestre.Models
         public DateTime FechaCreacion { get; set; } = DateTime.Now;
 
         [NotMapped]
-        [Display(Name = "Días restantes")]
         public int DiasRestantes => (FechaEntrega - DateTime.Today).Days;
 
         [NotMapped]
