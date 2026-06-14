@@ -12,6 +12,8 @@ namespace Apice_ll_Trimestre.Datos
 
         }
 
+        public DbSet<Estudiante> Estudiantes { get; set; }
+
 
     }
 }
